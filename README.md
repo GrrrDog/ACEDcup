@@ -7,7 +7,7 @@ For Apache Commons FileUpload ver <= 1.3 (CVE-2013-2186) and Oracle JDK ver < 7u
 The attack works even for newer versions of the lib or Java. We can upload any content in any directory, but 
 we cannot control a file name in this situation. Hovewer, it may be useful in some cases. 
 
-Also we can perform aNTLM-relay/sniffing attack (using \\\\evilhost\\any\\path) if your target is on Windows OS.
+Also we can perform a NTLM-relay/sniffing attack (using \\\\evilhost\\any\\path) if your target is on Windows OS.
 
 ## Usage
 ```
